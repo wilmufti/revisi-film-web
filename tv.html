@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a001c7932f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header  -->
+      <header>
+        <div class="mobile-nav">
+          <button class="burger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search.." name="search" />
+          </div>
+        </div>
+        <a href="index.html">
+          <img src="./images/logo.png" alt="" />
+        </a>
+        <nav>
+          <h2>Browse</h2>
+          <ul class="nav-links">
+            <li>
+              <i class="fa-solid fa-layer-group"></i>
+              <a href="index.html">Discover</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-video"></i>
+              <a href="movies.html">Movies</a>
+            </li>
+            <li class="active-link">
+              <i class="fa-solid fa-tv"></i>
+              <a href="tv.html">Tv Series</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-users"></i>
+              <a href="people.html">People</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="mobile-menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay-content">
+          <div>
+            <i class="fa-solid fa-layer-group"></i>
+            <a href="index.html">Discover</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-video"></i>
+            <a href="movies.html">Movies</a>
+          </div>
+          <div class="active-link-mobile">
+            <i class="fa-solid fa-tv"></i>
+            <a href="tv.html">TvSeries</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-users"></i>
+            <a href="people.html">People</a>
+          </div>
+        </div>
+      </div>
+      <!-- end header -->
+      <main class="list">
+        <div class="list-top">
+          <h1>Tv Series</h1>
+          <select id="select-category">
+            <option value="popular">Popular</option>
+            <option value="toprated">Top Rated</option>
+            <option value="airingtoday">Airing Today</option>
+          </select>
+        </div>
+        <div class="genres-container">
+          <div class="genres-left-arrow">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="genre-box-container">
+            <div class="genre-box genre-box-active">All</div>
+            <div class="genre-box">Action</div>
+            <div class="genre-box">Adventure</div>
+            <div class="genre-box">Animation</div>
+            <div class="genre-box">Comedy</div>
+            <div class="genre-box">Crime</div>
+            <div class="genre-box">Documentary</div>
+            <div class="genre-box">Drama</div>
+            <div class="genre-box">Family</div>
+            <div class="genre-box">History</div>
+            <div class="genre-box">Horror</div>
+            <div class="genre-box">Music</div>
+            <div class="genre-box">Mystery</div>
+            <div class="genre-box">Romance</div>
+            <div class="genre-box">Science Fiction</div>
+            <div class="genre-box">Tv Movie</div>
+            <div class="genre-box">Thriller</div>
+            <div class="genre-box">War</div>
+            <div class="genre-box">Western</div>
+          </div>
+          <div class="genres-right-arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="list-items-container">
+          <div class="list-item">
+            <img
+              class="list-item-image"
+              src="https://images6.alphacoders.com/134/1346619.jpeg"
+              alt="img"
+            />
+            <div class="list-item-details">
+              <p class="item-title">Sousou no Frieren</p>
+              <div class="list-item-details-year-rating">
+                <h5>2023</h5>
+                <i class="fa-solid fa-star"></i>
+                <h5>9.31</h5>
+              </div>
+            </div>
+          </div>
+          <div class="list-item">
+            <img
+              class="list-item-image"
+              src="https://wallpapercave.com/wp/fB42Y0H.jpg"
+              alt="img"
+            />
+            <div class="list-item-details">
+              <p class="item-title">Fullmetal Alchemist: Brotherhood</p>
+              <div class="list-item-details-year-rating">
+                <h5>2009</h5>
+                <i class="fa-solid fa-star"></i>
+                <h5>9.10</h5>
+              </div>
+            </div>
+          </div>
+          <div class="list-item">
+            <img
+              class="list-item-image"
+              src="https://2.bp.blogspot.com/-VXvWH8cspyA/Wj5tmBu9pXI/AAAAAAAADEg/iJAdFrfKu4kHWGsFZ-YvVVYGvAUql6oAgCLcBGAs/s1600/Steins%252CGate%2BAnime.png"
+              alt="img"
+            />
+            <div class="list-item-details">
+              <p class="item-title">Steins;Gate</p>
+              <div class="list-item-details-year-rating">
+                <h5>2011</h5>
+                <i class="fa-solid fa-star"></i>
+                <h5>9.07</h5>
+              </div>
+            </div>
+          </div>
+          <div class="list-item">
+            <img
+              class="list-item-image"
+              src="https://kratserial.ru/images/attackontitan2.jpg"
+              alt="img"
+            />
+            <div class="list-item-details">
+              <p class="item-title">Shingeki no Kyojin Season 3 Part 2</p>
+              <div class="list-item-details-year-rating">
+                <h5>2019</h5>
+                <i class="fa-solid fa-star"></i>
+                <h5>9.05</h5>
+              </div>
+            </div>
+          </div>
+          <div class="list-item">
+            <img
+              class="list-item-image"
+              src="https://i.ytimg.com/vi/zWCx6C9jAao/maxresdefault.jpg"
+              alt="img"
+            />
+            <div class="list-item-details">
+              <p class="item-title">Gintama°</p>
+              <div class="list-item-details-year-rating">
+                <h5>2015</h5>
+                <i class="fa-solid fa-star"></i>
+                <h5>9.05</h5>
+              </div>
+            </div>
+          </div>
+          <div class="list-item">
+            <img
+              class="list-item-image"
+              src="https://th.bing.com/th/id/R.92f732c22f2bfcbad165ece531fe00ca?rik=JBP9UuFMB%2fWWcQ&riu=http%3a%2f%2fmusicart.xboxlive.com%2f7%2f7d3d5b00-0000-0000-0000-000000000002%2f504%2fimage.jpg&ehk=fdk59NtR%2foAvzD026ofQebSi2kFQvqtw%2fBxUvTVNLzM%3d&risl=&pid=ImgRaw&r=0"
+              alt="img"
+            />
+            <div class="list-item-details">
+              <p class="item-title">Hunter x Hunter (2011)</p>
+              <div class="list-item-details-year-rating">
+                <h5>2011</h5>
+                <i class="fa-solid fa-star"></i>
+                <h5>9.03</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination-container">
+          <div class="pagination-box active-page">1</div>
+          <div class="pagination-box">2</div>
+          <div class="pagination-box">Next Page</div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/movies-tv.js"></script>
+  </body>
+</html>

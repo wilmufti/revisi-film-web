@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a001c7932f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="details-container">
+      <!-- header  -->
+      <div class="details-header">
+        <a href="index.html">
+          <img src="images/logo.png" alt="" />
+        </a>
+        <div class="search-container-details">
+          <input type="text" placeholder="Search.." name="search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <!-- end header  -->
+      <div class="details-content">
+        <img
+          src="https://cdn.myanimelist.net/images/anime/1244/138851.jpg"
+          alt="details"
+        />
+        <div class="details-image-right">
+          <div class="details-image-right-top">
+            <h1>One Piece</h1>
+            <i class="fa-regular fa-star">
+              <span>8.6</span>
+            </i>
+          </div>
+          <p id="details-overview">
+            Monkey D. Luffy, a carefree yet powerful teen with a superhuman ability, 
+            survives a whirlpool and ends up on a pirate-attacked ship. Inspired by 
+            the legendary Pirate King Gol D. Roger, who revealed the location of the 
+            One Piece treasure, Luffy sets out to become the next Pirate King. Despite 
+            lacking a crew and proper ship at first, his determination and spirit lead 
+            him to face countless dangers with a smile, while gathering unique companions 
+            for an unforgettable adventure across the seas.
+          </p>
+          <button onclick="readMore()" id="myBtn">Read more</button>
+          <h2>Genres</h2>
+          <div class="details-genres-container">
+            <div class="genres-side-left">
+              <i class="fa-solid fa-caret-left"></i>
+            </div>
+            <div class="details-genres">
+              <div class="genre-boxes">
+                <p>Action</p>
+              </div>
+              <div class="genre-boxes">
+                <p>Adventure</p>
+              </div>
+              <div class="genre-boxes">
+                <p>Fantasy</p>
+              </div>
+            </div>
+            <div class="genres-side-right">
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actors">
+        <div class="actors-top">
+          <h2>Characters</h2>
+          <div class="actors-scroll-controls">
+            <div class="actors-controls-left">
+              <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="actors-controls-right">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="actors-scroll">
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/9/310307.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Monkey D., Luffy</p>
+              <p>Tanaka, Mayumi</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/3/100534.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Roronoa, Zoro</p>
+              <p>Nakai, Kazuya</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/5/136769.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Sanji</p>
+              <p>Hirata, Hiroaki</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/16/363700.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Joe Keery</p>
+              <p>Yamaguchi, Yuriko</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/3/100536.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Tony Tony, Chopper</p>
+              <p>Ootani, Ikue</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/2/263249.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Nami</p>
+              <p>Okamura, Akemi</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/16/188076.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>	Usopp</p>
+              <p>Yamaguchi, Kappei</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/10/161005.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Brook</p>
+              <p>Cho</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/13/210053.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Franky</p>
+              <p>Yao, Kazuki</p>
+            </div>
+          </div>
+          <div class="actors-card">
+            <div class="crop-container">
+              <img
+                src="https://cdn.myanimelist.net/images/characters/15/307148.jpg"
+              />
+            </div>
+            <div class="card-details">
+              <p>Jinbe</p>
+              <p>Houki, Katsuhisa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/details.js"></script>
+  </body>
+</html>
