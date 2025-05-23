@@ -139,7 +139,7 @@ let scrollItem = document.querySelectorAll(".actors-scroll img");
 scrollItem.forEach((item) => {
   item.style.cursor = "pointer";
   item.addEventListener("click", () => {
-    location.href = "./people-details.html";
+    location.href = "./people-details.php";
   });
 });
 

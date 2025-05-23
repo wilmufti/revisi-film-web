@@ -66,7 +66,7 @@ const infoBoxImage = document.querySelectorAll(".info-box img");
 infoBoxImage.forEach((e) => {
   e.style.cursor = "pointer";
   e.addEventListener("click", () => {
-    location.href = "details.html";
+    location.href = "details.php";
   });
 });
 

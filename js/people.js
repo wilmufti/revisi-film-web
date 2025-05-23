@@ -3,6 +3,6 @@ const listItemImage = document.querySelectorAll(".list-item-people .list-item-im
 listItemImage.forEach((e) => {
   e.style.cursor = "pointer";
   e.addEventListener("click", () => {
-    location.href = "./people-details.html";
+    location.href = "./people-details.php";
   });
 });
