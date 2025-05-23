@@ -72,6 +72,6 @@ let scrollItem = document.querySelectorAll(".people-details-scroll-item img");
 scrollItem.forEach((item) => {
   item.style.cursor = "pointer";
   item.addEventListener("click", () => {
-    location.href = "details.html";
+    location.href = "details.php";
   });
 });
