@@ -81,19 +81,20 @@
 
     <div class="list-items-container">
       <?php
-      $result = $conn->query("SELECT * FROM movies");
+      $result = $conn->query("SELECT * FROM movies ORDER BY rating DESC");
       while ($row = $result->fetch_assoc()) {
-        echo '<div class="list-item">
-                <img class="list-item-image" src="' . $row['gambar'] . '" alt="img" />
+        $judulEncoded = urlencode($row['judul']);
+        echo '<a href="details.php?judul=' . $judulEncoded . '" class="list-item">
+                <img class="list-item-image" src="' . htmlspecialchars($row['gambar']) . '" alt="' . htmlspecialchars($row['judul']) . '" />
                 <div class="list-item-details">
-                  <p class="item-title">' . $row['judul'] . '</p>
+                  <p class="item-title">' . htmlspecialchars($row['judul']) . '</p>
                   <div class="list-item-details-year-rating">
-                    <h5>' . $row['tahun'] . '</h5>
+                    <h5>' . htmlspecialchars($row['tahun']) . '</h5>
                     <i class="fa-solid fa-star"></i>
-                    <h5>' . $row['rating'] . '</h5>
+                    <h5>' . htmlspecialchars($row['rating']) . '</h5>
                   </div>
                 </div>
-              </div>';
+              </a>';
       }
       ?>
     </div>
