@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container">
-  <!-- header  -->
+  <!-- header -->
   <header>
     <div class="mobile-nav">
       <button class="burger"><i class="fa-solid fa-bars"></i></button>
@@ -41,10 +41,9 @@
       <div><i class="fa-solid fa-users"></i><a href="people.php">People</a></div>
     </div>
   </div>
-  <!-- end header -->
 
   <main>
-    <!-- slider  -->
+    <!-- slider -->
     <div class="search-container search-in-slider">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" placeholder="Search.." name="search" />
@@ -71,7 +70,6 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-    <!-- end slider -->
 
     <!-- TRENDING -->
     <div class="custom-scrollbar-container">
@@ -92,7 +90,9 @@
         $trending = $conn->query("SELECT * FROM films WHERE category='trending'");
         while ($film = $trending->fetch_assoc()) {
           echo '<div class="info-box">
-                  <img src="' . $film['poster'] . '" />
+                  <a href="details.php?judul=' . urlencode($film['judul']) . '">
+                    <img src="' . $film['poster'] . '" alt="' . $film['judul'] . '" />
+                  </a>
                   <div class="home-scrollbar-title">' . $film['judul'] . '</div>
                   <div class="home-scrollbar-rating">' . $film['rating'] . '</div>
                 </div>';
@@ -120,7 +120,9 @@
         $popular = $conn->query("SELECT * FROM films WHERE category='popular'");
         while ($film = $popular->fetch_assoc()) {
           echo '<div class="info-box">
-                  <img src="' . $film['poster'] . '" />
+                  <a href="details.php?judul=' . urlencode($film['judul']) . '">
+                    <img src="' . $film['poster'] . '" alt="' . $film['judul'] . '" />
+                  </a>
                   <div class="home-scrollbar-title">' . $film['judul'] . '</div>
                   <div class="home-scrollbar-rating">' . $film['rating'] . '</div>
                 </div>';

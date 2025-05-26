@@ -1,9 +1,4 @@
-<?php
-$koneksi = new mysqli("localhost", "root", "", "rmf_films");
-if ($koneksi->connect_error) {
-  die("Koneksi gagal: " . $koneksi->connect_error);
-}
-?>
+<?php include "db.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,22 +81,25 @@ if ($koneksi->connect_error) {
       <div class="list-items-container">
         <?php
         $sql = "SELECT * FROM tv_series ORDER BY rating DESC";
-        $result = $koneksi->query($sql);
+        $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
+        if ($result && $result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
-            $img = !empty($row["gambar"]) ? $row["gambar"] : "./images/no-image.jpg";
-            echo '<div class="list-item">
-                    <img class="list-item-image" src="' . $img . '" alt="img" />
+            $img = !empty($row["gambar"]) ? htmlspecialchars($row["gambar"]) : "./images/no-image.jpg";
+            $judul = htmlspecialchars($row["judul"]);
+            $judulUrl = urlencode($row["judul"]);
+
+            echo '<a href="details.php?judul=' . $judulUrl . '" class="list-item">
+                    <img class="list-item-image" src="' . $img . '" alt="' . $judul . '" />
                     <div class="list-item-details">
-                      <p class="item-title">' . htmlspecialchars($row["judul"]) . '</p>
+                      <p class="item-title">' . $judul . '</p>
                       <div class="list-item-details-year-rating">
-                        <h5>' . $row["tahun"] . '</h5>
+                        <h5>' . htmlspecialchars($row["tahun"]) . '</h5>
                         <i class="fa-solid fa-star"></i>
-                        <h5>' . $row["rating"] . '</h5>
+                        <h5>' . htmlspecialchars($row["rating"]) . '</h5>
                       </div>
                     </div>
-                  </div>';
+                  </a>';
           }
         } else {
           echo "<p>Tidak ada TV Series dalam database.</p>";
