@@ -50,10 +50,7 @@ if (!$film) {
   die('Judul tidak ditemukan di database.');
 }
 
-// Ganti field poster jika tabel bukan dari `films`
 $poster = ($table == 'films') ? $film['poster'] : $film['gambar'];
-
-// Ambil metadata dari tabel anime_metadata
 $anime_name = $film['judul'];
 $source = $table;
 
@@ -89,59 +86,47 @@ if ($meta_result && $meta_result->num_rows > 0) {
       <a href="index.php">
         <img src="images/logo.png" alt="" />
       </a>
-      <div class="search-container-details">
-        <input type="text" placeholder="Search.." name="search" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
     </div>
 
-    <div class="details-content">
-      <img src="<?= htmlspecialchars($poster) ?>" alt="<?= htmlspecialchars($film['judul']) ?>" />
-      <div class="details-image-right">
-        <div class="details-image-right-top">
+    <div class="details-content-characters">
+      <div class="details-left">
+        <img src="<?= htmlspecialchars($poster) ?>" alt="<?= htmlspecialchars($film['judul']) ?>" />
+      </div>
+      <div class="details-right">
+        <div class="details-title-rating">
           <h1><?= htmlspecialchars($film['judul']) ?></h1>
-          <i class="fa-regular fa-star">
+          <div class="details-rating">
+            <i class="fa-regular fa-star"></i>
             <span><?= htmlspecialchars($film['rating']) ?></span>
-          </i>
+          </div>
         </div>
         <p id="details-overview">
           <?= nl2br(htmlspecialchars($description)) ?>
         </p>
-        <button onclick="readMore()" id="myBtn">Read more</button>
-
         <h2>Genres</h2>
         <div class="details-genres-container">
-          <div class="genres-side-left"><i class="fa-solid fa-caret-left"></i></div>
           <div class="details-genres">
             <?php foreach ($genres as $genre): ?>
               <div class="genre-boxes"><p><?= htmlspecialchars(trim($genre)) ?></p></div>
             <?php endforeach; ?>
           </div>
-          <div class="genres-side-right"><i class="fa-solid fa-caret-right"></i></div>
         </div>
-      </div>
-    </div>
-
-    <div class="actors">
-      <div class="actors-top">
-        <h2>Characters</h2>
-        <div class="actors-scroll-controls">
-          <div class="actors-controls-left"><i class="fa-solid fa-angle-left"></i></div>
-          <div class="actors-controls-right"><i class="fa-solid fa-angle-right"></i></div>
-        </div>
-      </div>
-      <div class="actors-scroll">
-        <?php foreach ($characters as $char): ?>
-          <div class="actors-card">
-            <div class="crop-container">
-              <img src="<?= htmlspecialchars($char['image_url']) ?>" alt="<?= htmlspecialchars($char['name']) ?>" />
-            </div>
-            <div class="card-details">
-              <p><?= htmlspecialchars($char['name']) ?></p>
-              <p><?= htmlspecialchars($char['voice_actor']) ?></p>
-            </div>
+        <div class="actors">
+          <h2>Characters</h2>
+          <div class="actors-scroll">
+            <?php foreach ($characters as $char): ?>
+              <div class="actors-card">
+                <div class="crop-container">
+                  <img src="<?= htmlspecialchars($char['image_url']) ?>" alt="<?= htmlspecialchars($char['name']) ?>" />
+                </div>
+                <div class="card-details">
+                  <p><?= htmlspecialchars($char['name']) ?></p>
+                  <p><?= htmlspecialchars($char['voice_actor']) ?></p>
+                </div>
+              </div>
+            <?php endforeach; ?>
           </div>
-        <?php endforeach; ?>
+        </div>
       </div>
     </div>
   </div>
