@@ -50,8 +50,8 @@ if (!$result) {
       <a class="close">&times;</a>
       <div class="overlay-content">
         <div><i class="fa-solid fa-layer-group"></i><a href="index.php">Discover</a></div>
-        <div><i class="fa-solid fa-video"></i><a href="movies.html">Movies</a></div>
-        <div><i class="fa-solid fa-tv"></i><a href="tv.html">Tv Series</a></div>
+        <div><i class="fa-solid fa-video"></i><a href="movies.php">Movies</a></div>
+        <div><i class="fa-solid fa-tv"></i><a href="tv.php">Tv Series</a></div>
         <div class="active-link-mobile"><i class="fa-solid fa-users"></i><a href="people.php">People</a></div>
       </div>
     </div>
@@ -64,12 +64,12 @@ if (!$result) {
       <div class="list-items-container">
         <?php if ($result->num_rows > 0): ?>
           <?php while ($row = $result->fetch_assoc()): ?>
-            <div class="list-item-people">
+            <a href="people-details.php?name=<?= urlencode($row['name']) ?>" class="list-item-people">
               <img class="list-item-image" src="<?= htmlspecialchars($row['image_url']) ?>" alt="img" />
               <div class="list-item-details-people">
                 <p class="item-title-people"><?= htmlspecialchars($row['name']) ?></p>
               </div>
-            </div>
+            </a>
           <?php endwhile; ?>
         <?php else: ?>
           <p>Tidak ada data.</p>
