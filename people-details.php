@@ -64,10 +64,6 @@ $conn->close();
   <div class="details-container">
     <div class="details-header">
       <a href="people.php"><img src="./images/logo.png" alt="Logo" /></a>
-      <div class="search-container-details">
-        <input type="text" placeholder="Search.." name="search" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
     </div>
     <div class="people-details-content">
       <div class="personal-info">

@@ -15,10 +15,6 @@
   <header>
     <div class="mobile-nav">
       <button class="burger"><i class="fa-solid fa-bars"></i></button>
-      <div class="search-container">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search.." name="search" />
-      </div>
     </div>
     <a href="index.php"><img src="./images/logo.png" alt="" /></a>
     <nav>
