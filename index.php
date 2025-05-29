@@ -15,10 +15,6 @@
   <header>
     <div class="mobile-nav">
       <button class="burger"><i class="fa-solid fa-bars"></i></button>
-      <div class="search-container">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search.." name="search" />
-      </div>
     </div>
     <a href="index.php"><img src="./images/logo.png" alt="" /></a>
     <nav>
@@ -44,10 +40,6 @@
 
   <main>
     <!-- slider -->
-    <div class="search-container search-in-slider">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Search.." name="search" />
-    </div>
     <div class="slideshow-container">
       <div class="mySlides fade">
         <img src="https://wallpaperaccess.com/full/9336992.gif" />
