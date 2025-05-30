@@ -231,6 +231,7 @@ if ($pk_res && $pk = mysqli_fetch_assoc($pk_res)) {
             <div class="action-links">
               <?php if ($primary_key && isset($row[$primary_key])): ?>
                 <a href="edit.php?table=<?= urlencode($table) ?>&id=<?= urlencode($row[$primary_key]) ?>">Edit</a>
+                <a href="delete.php?table=<?= urlencode($table) ?>&id=<?= urlencode($row[$primary_key]) ?>" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
               <?php endif; ?>
             </div>
           </div>
@@ -269,6 +270,7 @@ if ($pk_res && $pk = mysqli_fetch_assoc($pk_res)) {
               <td class="action-links">
                 <?php if ($primary_key && isset($row[$primary_key])): ?>
                   <a href="edit.php?table=<?= urlencode($table) ?>&id=<?= urlencode($row[$primary_key]) ?>">Edit</a>
+                  <a href="delete.php?table=<?= urlencode($table) ?>&id=<?= urlencode($row[$primary_key]) ?>" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
                 <?php else: ?>
                   <span>-</span>
                 <?php endif; ?>
